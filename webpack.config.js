@@ -10,4 +10,15 @@ module.exports = {
         port: 8030,
         contentBase: './public'
     },
+
+    module: {
+        loaders: [{
+            test: /.js?$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+            query: {
+                presets: ['es2015']
+            }
+        }]
+    }
 }
